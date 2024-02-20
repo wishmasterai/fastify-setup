@@ -1,33 +1,34 @@
-# Fastify Application Setup
+# Fastify Application Setup Guide
 
-This guide provides a streamlined setup for initiating a new project utilizing Fastify, TypeScript, ESLint, Prettier,
-and Husky.
+Welcome to the Fastify Application Setup Guide! This comprehensive guide is designed to help you kickstart a new project with Fastify, TypeScript, ESLint, Prettier, and Husky. By following these instructions, you'll set up a robust development environment optimized for efficiency and code quality.
 
-### Prerequisites
+## Prerequisites
 
-Ensure you have Node.js and npm installed on your system to follow the setup instructions.
+Before diving into the setup process, please ensure you have the following installed on your system:
+- **Node.js**: The runtime environment for executing JavaScript code server-side.
+- **npm**: The Node Package Manager, used for installing dependencies.
 
-### Getting Started
+## Getting Started
 
-This project uses Husky to manage Git hooks, ensuring code quality and consistency. Follow these steps to set up your
-project environment:
+This project leverages Husky, an advanced tool for managing Git hooks, to ensure code quality and consistency across your development workflow. Let's get started by setting up your project environment step by step.
 
-#### Setting Up Husky
+### Setting Up Husky
 
-To utilize Husky's pre-commit hook for enhancing your development workflow, execute the following command:
+Husky introduces pre-commit hooks to your workflow, enhancing development practices by automating tasks such as code formatting and lint checks before commits. To set up Husky, follow these steps:
 
-```
-npx husky install
-```
+1. **Install Husky**: Run the following command to install Husky in your project:
+    ```shell
+    npx husky install
+    ```
+   This command creates a `.husky` directory in your project root, where Husky's configuration and scripts will reside.
 
-Executing this command will create a .husky directory in your project. Inside this directory, a subdirectory named \_
-will appear, containing the husky.sh script, which is essential for Husky's operation.
+### Environment Configuration
 
-### Create new .env file from .env.example file
+To prepare your project environment, create a new `.env` file based on the provided example:
 
-```
+```shell
 cp .env.example .env
-```
+````
 
 ### Installing Dependencies
 
@@ -39,11 +40,16 @@ npm install
 
 ### Running the Application
 
-To start the application in development mode with live reloading, use:
-
+#### Development Mode
+For development purposes, start the application with live reloading enabled:
 ```
-npm run watch
+npm run start:dev
 ```
 
-This command compiles the TypeScript code and watches for any changes, automatically restarting the server to reflect
-updates.
+#### Production Mode
+To compile the application for production use and start the server:
+```
+npm run build && npm run start
+```
+
+You can verify the application is running by accessing: http://127.0.0.1:4000/hello
