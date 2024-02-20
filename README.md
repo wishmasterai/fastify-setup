@@ -12,7 +12,7 @@ Ensure you have Node.js and npm installed on your system to follow the setup ins
 This project uses Husky to manage Git hooks, ensuring code quality and consistency. Follow these steps to set up your
 project environment:
 
-### Setting Up Husky
+#### Setting Up Husky
 
 To utilize Husky's pre-commit hook for enhancing your development workflow, execute the following command:
 
@@ -22,6 +22,12 @@ npx husky install
 
 Executing this command will create a .husky directory in your project. Inside this directory, a subdirectory named \_
 will appear, containing the husky.sh script, which is essential for Husky's operation.
+
+### Create new .env file from .env.example file
+
+```
+cp .env.example .env
+```
 
 ### Installing Dependencies
 
